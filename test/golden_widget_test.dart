@@ -28,7 +28,7 @@ void main() {
           Device.tabletLandscape,
         ])
         ..addScenario(
-          widget: const MyHomePage(title:"FProject Layout",),
+          widget: const MyHomePage(title:"FLogging",),
           name: 'default page',
         );
       await tester.pumpDeviceBuilder(builder);
