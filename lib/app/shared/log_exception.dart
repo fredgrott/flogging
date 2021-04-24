@@ -30,6 +30,10 @@ import 'package:flogging/app/shared/log_pens.dart';
 /// The other part of this of course is the LogMixin as still effectively using
 /// most functions in some type of class as we are still not fully into doing FP
 /// in flutter. Well, at lest the pure kind.
+/// 
+/// This is null-safety enabled code as my dart target is 2.12.0 and above. I only 
+/// need to ensure non-null here as when it's called the zone, time, stacktrace, and level 
+/// always exist.
 ///
 /// @author Fredrick Allan Grott
 class LogException {
@@ -47,6 +51,7 @@ class LogException {
     log(penWarning(
         // ignore: prefer-trailing-comma
         // ignore: unnecessary_null_comparison
+        // ignore: prefer-trailing-comma
         "$message\n$stackTrace${cause != null ? "\nCaused by:\n$cause" : ""} in zone of $zone at level: $level on this $time"));
   }
 }
