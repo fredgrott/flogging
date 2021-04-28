@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.flogging.test.app_title" timestamp="2021-04-25T14:02:08">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.flogging.test.app_title" name="Basic App Chrome Title test onGenerateTitle handles changing locales" time="1.142"/>
+  </testsuite>
+  <testsuite errors="0" failures="0" tests="2" skipped="0" name="D:.fredgrttsstuff.GithubProjects.flogging.test.golden_widget" timestamp="2021-04-25T14:02:08">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.flogging.test.golden_widget" name="Basic Golden Tests  Golden test" time="3.214"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.flogging.test.golden_widget" name="Basic Golden Tests  DeviceBuilder  Golden" time="0.575"/>
+  </testsuite>
+  <testsuite errors="0" failures="0" tests="3" skipped="0" name="D:.fredgrttsstuff.GithubProjects.flogging.test.my_home_page" timestamp="2021-04-25T14:02:08">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.flogging.test.my_home_page" name="DeviceBuilder - one scenario - default devices Golden" time="1.829"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.flogging.test.my_home_page" name="DeviceBuilder - one scenario - override devices Golden" time="0.568"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.flogging.test.my_home_page" name="DeviceBuilder - multiple scenarios - with onCreate Golden" time="5.193"/>
+  </testsuite>
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.flogging.test.widget" timestamp="2021-04-25T14:02:08">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.flogging.test.widget" name="Counter increments smoke test" time="0.913"/>
+  </testsuite>
+</testsuites>

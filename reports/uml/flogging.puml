@@ -1,0 +1,66 @@
+@startuml
+set namespaceSeparator ::
+
+class "flogging::app::data::models::counter_mixin.dart::CounterMixin" {
+  {static} -int _counter
+  +int myCounter
+}
+
+class "flogging::app::modules::my_app.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "flogging::app::modules::my_app.dart::MyApp"
+
+class "flogging::app::screens::myhomepage::managers::my_home_page.dart::MyHomePage" {
+  +dynamic title
+  +MyHomePageState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "flogging::app::screens::myhomepage::managers::my_home_page.dart::MyHomePage"
+
+class "flogging::app::screens::myhomepage::statecontainers::my_home_page_state.dart::MyHomePageState" {
+  -void _incrementCounter()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "flogging::app::screens::myhomepage::statecontainers::my_home_page_state.dart::MyHomePageState"
+"flogging::app::data::models::counter_mixin.dart::CounterMixin" <|-- "flogging::app::screens::myhomepage::statecontainers::my_home_page_state.dart::MyHomePageState"
+
+abstract class "flogging::app::shared::logger_types.dart::UiLogger" {
+  +Logger logger
+}
+
+"flogging::app::shared::logger_types.dart::UiLogger" o-- "logging::src::logger.dart::Logger"
+
+abstract class "flogging::app::shared::logger_types.dart::NetworkLogger" {
+  +Logger logger
+}
+
+"flogging::app::shared::logger_types.dart::NetworkLogger" o-- "logging::src::logger.dart::Logger"
+
+abstract class "flogging::app::shared::logger_types.dart::UtilityLogger" {
+  +Logger logger
+}
+
+"flogging::app::shared::logger_types.dart::UtilityLogger" o-- "logging::src::logger.dart::Logger"
+
+class "flogging::app::shared::log_exception.dart::LogException" {
+  +String message
+  +StackTrace stackTrace
+  +Zone zone
+  +DateTime time
+  +int level
+  +Object cause
+}
+
+"flogging::app::shared::log_exception.dart::LogException" o-- "dart::async::Zone"
+
+abstract class "flogging::app::shared::types.dart::LoggerType" {
+  +Logger logger
+}
+
+"flogging::app::shared::types.dart::LoggerType" o-- "logging::src::logger.dart::Logger"
+
+
+@enduml
